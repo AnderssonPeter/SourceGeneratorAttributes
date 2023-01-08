@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,11 +9,10 @@
       <RestoreSources>$(RestoreSources);../SourceGeneratorAttributes/bin/Debug</RestoreSources>
   </PropertyGroup>
 
+    
+
     <ItemGroup>
-        <PackageReference Include="SourceGeneratorAttributes" Version="1.0.0">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
+      <ProjectReference Include="..\SourceGeneratorAttributes\SourceGeneratorAttributes.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
     </ItemGroup>
 
 </Project>
